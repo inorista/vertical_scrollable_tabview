@@ -111,6 +111,7 @@ class _VerticalScrollableTabViewState extends State<VerticalScrollableTabView>
       // ScrollNotification => https://www.jianshu.com/p/d80545454944
       child: NotificationListener<ScrollNotification>(
         child: CustomScrollView(
+          physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           controller: scrollController,
           slivers: [...widget._slivers, buildVerticalSliverList()],
         ),
